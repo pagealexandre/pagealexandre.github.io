@@ -1,18 +1,16 @@
 ---
 layout: page
 title: About
-permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+At [Algolia][2], we love Jekyll, so we decided to provide an easy-to-use [Jekyll
+plugin][3] to add an awesome search to your blog.
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
-
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+To make things even easier, we also [patched the Hyde theme][4] to give you an
+example.
 
 
-[jekyll-organization]: https://github.com/jekyll
+[1]: https://twitter.com/mdo
+[2]: https://www.algolia.com
+[3]: https://github.com/algolia/algoliasearch-jekyll
+[4]: https://github.com/algolia/algoliasearch-jekyll-hyde

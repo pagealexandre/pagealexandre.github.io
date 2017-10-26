@@ -11,7 +11,7 @@ When I began to learn Swift, I was confuse with the ! and ? symbols used everywh
 ## Optional
 An optional is a sort of wrapper that allow to deal with the absence of value in a variable. This is because Swift has been made to privilege safety and prevent error during the execution of an application. An optional of type Int e.g is represented the following way: 
 
-{% highlight linenos %}
+{% highlight swift linenos %}
 let number: Int?
 {% endhighlight %}
 
