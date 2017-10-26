@@ -10,7 +10,7 @@ Thread is a fondamental notion not only in Swift but in computer science general
 Concurrency is basically doing multiple tasks at the same time. Each tasks is executed by a thread. In iOS these threads are managed independently by the OS. We can think of threads as a highway :
 
 
-![Highway]({{site.url}}/assets/highway.jpg)
+![Highway](/assets/highway.jpg)
 
 Each car represent a task and each lane represent a Queue. When you go on the highway in the USA, you can notice sometimes an HOV lane, represented by an diamond on the floor and generally on the left : they are reserved for car with two three people inside, its goal is to reduces pollution and traffic. The main thread on Swift should follow the same idea : we don't want it to be busy because this is where we are going to apply UI task, so the fastest, the best. The background heavy tasks should operate on the right, i.e on the other threads.
 
@@ -62,13 +62,13 @@ queue.async {
 
 Which result to :
 
-{% highlight swift %}
+{% highlight text %}
 🔴🔵🔵🔴🔵🔴🔵🔴🔵🔴🔵🔴🔵🔴🔵🔴🔵🔴🔵🔴
 {% endhighlight %}
 
 It is possible to modify the qos parameter, basically it manages the priority, e.g with two background queue (global) having `.background` and `.userInteractive` we can expect this type of result :
 
-{% highlight swift %}
+{% highlight text %}
 🔵🔴🔵🔴🔵🔴🔵🔴🔵🔴🔵🔵🔵🔵🔴🔵🔴🔴🔴🔴
 {% endhighlight %}
 
@@ -91,7 +91,7 @@ DispatchQueue.main.async {
 
 Result :
 
-{% highlight swift linenos %}
+{% highlight text linenos %}
 🔴🔴🔴🔴🔴🔴🔴🔴🔴🔴🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵
 {% endhighlight %}
 
@@ -117,7 +117,7 @@ queue.sync {
 
 Will produce :
 
-{% highlight swift linenos %}
+{% highlight text linenos %}
 🔴🔴🔴🔴🔴🔴🔴🔴🔴🔴🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵
 {% endhighlight %}
 
