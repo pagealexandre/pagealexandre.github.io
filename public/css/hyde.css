@@ -30,6 +30,7 @@
  *
  * Update the foundational and global aspects of the page.
  */
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
 
 html {
   font-family: "PT Sans", Helvetica, Arial, sans-serif;
