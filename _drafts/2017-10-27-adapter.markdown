@@ -9,7 +9,69 @@ categories: ios swift
 
 After seeing the basic of Swift come the moment where you need to know some pattern. A design pattern, is a re-usable code that allow to solve common problem when designing an application. Today we'll see the Adapter pattern.
 
-First of all, we won't see any UML schema, after seeing them all from other sites, it just confuse thing IMHO.
+## Adapter, what for ?
+
+An adapter is a wrapper that allow a class to work with a specific protocol where the parameter of the class are not sufficient to operate the said protocol.
+The most comprehensible post is IMHO, is a problem that I found on the internet :
+You have a protocol with a function display that expect to receive "x1, y1, x2, y2" and a Rectangle class that is initialized with "x, y, width, height". How are we going to solve this problem ? Yes, you are right: Adapter !
+
+
+## The different players
+
+* Target : The target is the interface that the adapter needs to implement
+* Adapter : The adapter is the class containing the logic allowing the adaptee and the target to work together.
+* Adaptee : The Adaptee is the class that need an adaptor
+
+This is the rectangle class :
+
+{% highlight swift linenos %}
+
+class Rectangle { // Adaptee
+  let x: Double
+  let y: Double
+  let width: Double
+  let height: Double
+  
+  init(x: Double, y: Double, width: Double, height: Double) {
+    self.x = x
+    self.y = y
+    self.width = width
+    self.height = height
+  }
+  
+}
+{% endhighlight %}
+
+And here is the protocol uncompatible with the Rectangle class.
+
+{% highlight swift %}
+protocol Shape { // Target
+  func display(x1: Double, y1: Double, x2: Double, y2: Double)
+}
+{% endhighlight %}
+
+Here come the adapter : a sort of wrapper that will allow the class Rectangle to work with the protocol Shape.
+
+{% highlight swift linenos %}
+class RectangleAdapter: Shape { // Adapter
+  var rectangle: Rectangle
+  
+  init(rectangle: Rectangle) {
+    self.rectangle = rectangle
+    let x2 = rectangle.x + rectangle.width
+    let y2 = rectangle.y + rectangle.height
+    
+    self.display(x1: rectangle.x, y1: rectangle.y, x2: x2, y2: y2)
+  }
+  
+  func display(x1: Double, y1: Double, x2: Double, y2: Double) {
+    // BINGO
+  }
+}
+{% endhighlight %}
+
+
+
 
 
 
