@@ -1,0 +1,16 @@
+---
+layout: post
+title: Swift - Design Pattern - Adapter
+permalink: optional-and-cast.html
+categories: ios swift
+---
+
+
+
+After seeing the basic of Swift come the moment where you need to know some pattern. A design pattern, is a re-usable code that allow to solve common problem when designing an application. Today we'll see the Adapter pattern.
+
+First of all, we won't see any UML schema, after seeing them all from other sites, it just confuse thing IMHO.
+
+
+
+
