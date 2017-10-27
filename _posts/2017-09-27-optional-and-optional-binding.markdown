@@ -17,7 +17,6 @@ let number: Int?
 
 The interrogative point indicates the variable might contain a value but it might have no value at all.
 
-
 To access the value of an optional we use the exclamation mark (!).This technique is called the *forced unwrapping*.  Accessing a nil value with ! will trigger a runtime error, so it's alway smart to check the optional before accessing it. 
 
 {% highlight swift linenos %}
