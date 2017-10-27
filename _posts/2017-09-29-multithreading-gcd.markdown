@@ -44,7 +44,7 @@ A concurrent Queue is faster because things are done concurrently (every task ar
 ## DispatchQueue
 The DispatchQueue object manages the queue. The main and global queues are available : they are for UI task and heavy task such as Fetching JSON Data from a REST API respectively. Let's highlight the difference between a serial queue and a concurrent queue through some code :
 
-{% highlight swift linenos %}
+{% highlight swift %}
 let queue = DispatchQueue.global(qos: .background) // concurrent queue
 
 queue.async {
