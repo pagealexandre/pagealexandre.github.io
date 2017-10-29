@@ -5,8 +5,6 @@ permalink: optional-and-cast.html
 categories: ios swift
 ---
 
-
-
 After seeing the basic of Swift comes the moment where you need to know some patterns. A design pattern, is a re-usable code that allow to solve common problem when designing an application. Today we'll see the Adapter pattern.
 
 ## Adapter, what for ?
