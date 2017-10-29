@@ -46,6 +46,7 @@ class iPhone8: iPhone {
     super.init(screenSize: 4.7)
   }
 }
+
 {% endhighlight %}
 
 This is the factory which has the role to create different instance of iPhone.
