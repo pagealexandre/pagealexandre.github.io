@@ -25,6 +25,7 @@ enum Models {
 
 These are the classes representing the different iPhones on the market. We use inheritance to save the common attributes.
 {% highlight swift %}
+
 class iPhone {
   var screenSize: Double
   
