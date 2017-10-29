@@ -1,0 +1,7 @@
+language: ruby
+cache: bundler
+branches:
+  only:
+    - master
+script: 
+  - bundle exec jekyll algolia push
