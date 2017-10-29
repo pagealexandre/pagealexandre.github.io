@@ -25,7 +25,6 @@ enum Models {
 
 These are the classes representing the different iPhones on the market. We use inheritance to save the common attributes.
 {% highlight swift %}
-
 class iPhone {
   var screenSize: Double
   
@@ -71,6 +70,12 @@ print(type(of: instance)) // iPhone8
 print(instance.screenSize) // 4.7
 
 {% endhighlight %}
+
+## Singeton vs static Factory
+
+After having writing this article I realize how **wrong** it is to use singleton for a factory. Directly calling a static function allow to save memory (no singleton instantiated), writing less code and is a lot less verbose : ```iPhoneFactory.produceIphone(type: .iPhone8)``` compared to ```iPhoneFactory.sharedInstance.produceIphone(type: .iPhone8)```.
+
+To conclude, basically a factory is a wrapper which instantiate multiple different objects based on parameters, here, an enum.
 
 <!-- To recap basically the Factory is a wrapper which allow to instantiante different class type based on parameters, here, an enum. -->
 
