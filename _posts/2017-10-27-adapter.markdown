@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Swift - Design Pattern - Adapter
-permalink: optional-and-cast.html
-categories: ios swift
+permalink: design-pattern-adapter.html
+categories: ios swift design pattern
 ---
 
 After seeing the basic of Swift comes the moment where you need to know some patterns. A design pattern, is a re-usable code that allow to solve common problem when designing an application. Today we'll see the Adapter pattern.
@@ -11,7 +11,7 @@ After seeing the basic of Swift comes the moment where you need to know some pat
 
 An adapter is a wrapper that allow a class to work with a specific protocol where the parameter of the class are not sufficient to operate the said protocol.
 The most comprehensible post is IMHO, a problem that I found on the internet :
-You have a protocol with a function display that expect to receive "x1, y1, x2, y2" and a Rectangle class that is initialized with "x, y, width, height". How are we going to solve this problem ? Yes, you are right: Adapter !
+You have a protocol with a function display that expect to receives "x1, y1, x2, y2" and a Rectangle class that is initialized with "x, y, width, height". How are we going to make the Rectangle class compatible with the display function ? Yes, you are right: Adapter !
 
 
 ## The different players
