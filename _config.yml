@@ -1,6 +1,6 @@
 # Dependencies
 markdown:         kramdown
-highlighter:      Rouge
+highlighter:      rouge
 
 # Permalinks
 permalink:        pretty
@@ -18,7 +18,7 @@ exclude:          [vendor]
 
 author:           
   name:           Alexandre Page
-  email:          page_a@Ohsorryiamfrench.fr
+  email:          
 # Thanks to @mdo for the original theme
 # author:
 #   name:           'Mark Otto'
@@ -33,7 +33,7 @@ github:
     repo:         https://github.com/algolia/algoliasearch-jekyll-hyde
 
 # Algolia
-gems:
+plugins:
   - algoliasearch-jekyll
 
 algolia:

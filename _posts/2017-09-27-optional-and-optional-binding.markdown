@@ -11,7 +11,7 @@ When I began to learn Swift, I was confuse with the ! and ? symbols used everywh
 ## Optional
 An optional is a sort of wrapper that allow to deal with the absence of value in a variable. This is because Swift has been made to privilege safety and prevent error during the execution of an application. An optional of type Int e.g is represented the following way: 
 
-{% highlight swift linenos %}
+{% highlight swift %}
 let number: Int?
 {% endhighlight %}
 
@@ -19,7 +19,7 @@ The interrogative point indicates the variable might contain a value but it migh
 
 To access the value of an optional we use the exclamation mark (!).This technique is called the *forced unwrapping*.  Accessing a nil value with ! will trigger a runtime error, so it's alway smart to check the optional before accessing it. 
 
-{% highlight swift linenos %}
+{% highlight swift %}
 if number != nil {
 	print(number!)
 }
@@ -31,7 +31,7 @@ if number != nil {
 
 Optional binding allows to check if the variable actually contains a value through an if statement :
 
-{% highlight swift linenos %}
+{% highlight swift %}
 if let b = Int(a) {
 	print(b)
 }
@@ -43,7 +43,7 @@ If the optional Int returned by Int(a) contains a value, then the value is assig
 ## Implicitly unwrapped optionals
 When we are sure the value of a variable will not be nil, e.g constant with let, we can use *implicitly unwrapped optionals* to directly unwrap the value during variable declaration.
 
-{% highlight swift linenos %}
+{% highlight swift %}
 let version: String! = "1.0" // Implicitly unwrapped optionals
 let str: String? = "1.0"
 
@@ -55,9 +55,9 @@ print(str!) // "1.0"
 ## Optional Chaining
 The optional chaining concept proposes to query properties, methods, values that might be in an optional and thus might be nil. If the optional have a value, then the call to the property, method, value succeeds.
 
-<!-- - The optional chaining return nil if variable is nil. -->
+- The optional chaining return nil if variable is nil.
 
-{% highlight swift linenos %}
+{% highlight swift %}
 class Person {
 	var car: Car?
 }
@@ -75,7 +75,7 @@ let wheels = alex.car?.numberOfWheels // return nil
 
 The idea here is to uses the question mark instead of the exclamation mark. The optional chaining on line 12 will always return an optional : Int? or if the car is nil (which is the case here), then it return nil. However if the car is not empty :
 
-{% highlight swift linenos %}
+{% highlight swift %}
 alex.car = Car()
 let wheels = alex.car?.numberOfWheels // 4
 {% endhighlight %}
@@ -84,7 +84,7 @@ let wheels = alex.car?.numberOfWheels // 4
 ## As, As? and As!
 
 To avoid repetitive content for the next example, we will consider these two classes :
-{% highlight swift linenos %}
+{% highlight swift %}
 class Animal {}
 
 class Dog: Animal {}
@@ -93,14 +93,14 @@ class Dog: Animal {}
 
 The as operator is used for cast, specially **upcast** i.e conversion of a specialized class to its superclass. Basic example are :
 
-{% highlight swift linenos %}
+{% highlight swift %}
 let a = 5.0 as Double
 let dog: Dog = Dog()
 let animal: Animal = dog as Animal // Upcast
 {% endhighlight %}
 
 But the real usefulness of the as symbol relate when doing **downcast** i.e conversion of a superclass to specialized one :
-{% highlight swift linenos %}
+{% highlight swift %}
 
 let animal: Animal = Dog()
 
@@ -109,11 +109,11 @@ animal as Dog // will raise an error
 animal as! Dog // Force downcast
 animal as? Dog
 
-{% endhighlight%}
+{% endhighlight %}
 
 as! will force the cast, so we have to be sure of the type (Will crash at runtime otherwise). However as? will perform the cast if possible, otherwise it will simply return nil. It makes a lot of sense to use it that way :
 
-{% highlight swift linenos %}
+{% highlight swift %}
 if let animal = animal as? Dog {
 	print("BINGO")
 }

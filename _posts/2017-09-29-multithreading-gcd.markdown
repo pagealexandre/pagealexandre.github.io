@@ -75,7 +75,7 @@ It is possible to modify the qos parameter, basically it manages the priority, e
 
 Now to demonstrate the principle of a serial queue, let's take the main queue.
 
-{% highlight swift linenos %}
+{% highlight swift %}
 DispatchQueue.main.async {
     for _ in 0..<10 {
         print("🔴")
@@ -91,7 +91,7 @@ DispatchQueue.main.async {
 
 Result :
 
-{% highlight text linenos %}
+{% highlight text %}
 🔴🔴🔴🔴🔴🔴🔴🔴🔴🔴🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵
 {% endhighlight %}
 
@@ -99,7 +99,7 @@ In these two example we use the `async` method to perform the action. Just as a 
 - In a synchronous block, the main threads get the control back once the function is finished.
 - In a asynchronous block, the code is executed on a parallel thread but the main thread is not blocked. Thus the asynchronous function does not block the behaviour of an application.
 
-{% highlight swift linenos %}
+{% highlight swift %}
 let queue = DispatchQueue.global(qos: .background) // Concurrent Queue
 
 queue.sync {
@@ -117,7 +117,7 @@ queue.sync {
 
 Will produce :
 
-{% highlight text linenos %}
+{% highlight text %}
 🔴🔴🔴🔴🔴🔴🔴🔴🔴🔴🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵
 {% endhighlight %}
 
@@ -132,7 +132,7 @@ The main queue run on the main threads and is a *serial queue*. The global queue
 
 ## DispatchWorkItem
 
-{% highlight swift linenos %}
+{% highlight swift %}
 let queue = DispatchQueue.global(qos: .background)
 
 let job = DispatchWorkItem {
@@ -148,7 +148,7 @@ queue.async(execute: job)
 ## Final case
 It is possible to combine DispatchWorkItem and Notify, I currently did not find any solution to pass parameter to the notify function. 
 
-{% highlight swift linenos %}
+{% highlight swift %}
 
 var fetch: NSData?
 let imageURL = URL(string:"https://upload.wikimedia.org/wikipedia/commons/d/d9/Arduino_ftdi_chip-1.jpg")
@@ -169,7 +169,7 @@ DispatchQueue.global(qos: DispatchQoS.userInteractive.qosClass).async(execute: j
 
 I agree it is the more idiomatic way to express background however semanticaly speaking, It is not clear and intuitive. This leads us to the following snippet of code which although simpler I found easier to read and of course proceed the exact same thing :
 
-{% highlight swift linenos %}
+{% highlight swift %}
 
 let imageURL = URL(string:"https://upload.wikimedia.org/wikipedia/commons/d/d9/Arduino_ftdi_chip-1.jpg")
 
