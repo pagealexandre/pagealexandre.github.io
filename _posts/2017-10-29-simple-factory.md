@@ -70,5 +70,5 @@ print(instance.screenSize) // 4.7
 
 {% endhighlight %}
 
-To recap basically the Factory is a wrapper which allow to instantiante different class type based on parameters, here, an enum.
+<!-- To recap basically the Factory is a wrapper which allow to instantiante different class type based on parameters, here, an enum. -->
 
