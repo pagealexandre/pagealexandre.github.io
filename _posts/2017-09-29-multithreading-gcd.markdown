@@ -184,15 +184,5 @@ DispatchQueue.global(qos: .background).async {
 
 {% endhighlight %}
 
-###What is the plan ?
-
-- Highlight difference between serial and concurrency : done
-- QoS class and priority : done
-- Async / Sync : done
-
-- DispatchQueue.global appelle le thread ou la Queue ? Je pense la Queue
-- WorkItem and notify : done
-- CustomQueue
-
 
 
