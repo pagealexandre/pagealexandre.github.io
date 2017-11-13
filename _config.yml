@@ -39,7 +39,7 @@ plugins:
 algolia:
   application_id: 'PYPITZ0454'
   index_name: 'post_jekyll'
-  read_only_api_key: '5aac81c47674be30de1505a6c75f3a5f'
+  read_only_api_key: '8efa56b752b8834169748d6504de78f9'
   excluded_files:
     - 404.html
     - index.html
