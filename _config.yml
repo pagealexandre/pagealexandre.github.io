@@ -34,12 +34,11 @@ github:
 
 # Algolia
 plugins:
-  - algoliasearch-jekyll
 
 algolia:
-  application_id: 'PYPITZ0454'
-  index_name: 'post_jekyll'
-  read_only_api_key: '8efa56b752b8834169748d6504de78f9'
+  application_id: 'YD1JXRZX2P'
+  index_name: 'jekyll_posts_production'
+  read_only_api_key: '0727995295b5ffb0e667fc4bdcb66e00'
   excluded_files:
     - 404.html
     - index.html
