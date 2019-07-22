@@ -21,7 +21,7 @@ You have been just phished. This was a fake website and you give it your twitter
 
 The link on twitter that you open in a new tab was containing the following piece of code :
 
-```
+```javascript
 window.opener.location="http://phishingtwitter.com"
 ```
 
@@ -34,7 +34,7 @@ This is currently working on up-to-date major browsers like Chrome.
 
 ### How to prevent the security issue ?
 To prevent the control of the parent tab through the children one, just the add this to your link :
-```
+```javascript
 rel="noopener noreffer"
 ```
 

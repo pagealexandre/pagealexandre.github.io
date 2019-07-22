@@ -80,14 +80,14 @@ We find again the same logic when we don't pass any block to the function : retu
 
 According to [this post](http://www.monkeyandcrow.com/blog/reading_rails_how_do_batched_queries_work/) and my experience digging in the code what happen is first we set `LIMIT` and `ORDER` parameter on the SQL queries that will be made. This is done through this code : 
 
-```
+```rb
 relation = relation.reorder(batch_order).limit(batch_size)
 ```
 
 `batch_size` is set from the options you gave or default to 1000
 `batch_order` is using reflection to set the SQL query : 
 
-```
+```rb
 def batch_order
   "#{quoted_table_name}.#{quoted_primary_key} ASC"
 end
@@ -95,7 +95,7 @@ end
 
 All of this result in have a query like this one : 
 
-```
+```rb
 Users Load (1.8ms)  SELECT  "users".* FROM "users" WHERE ("users"."id" > 2000) ORDER BY "users"."id" ASC LIMIT $1  [["LIMIT", 2000]]
 ```
 We see the ORDER BY "users"."id" ASC which come from the previous method and set the limit. By doing that we assure that users id will be fetch in the good order (asc) so that we can fetch all the records by batch.
