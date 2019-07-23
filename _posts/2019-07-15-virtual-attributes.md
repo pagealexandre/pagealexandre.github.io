@@ -28,7 +28,7 @@ class EpcOrder < ApplicationRecord
 end
 ```
 
-`gtins_count` is the virtual attribute. I was using at first the `attr_accessor` ruby keyword to defined the getter / setter of the attributes, but I discovered the [attributes](https://api.rubyonrails.org/classes/ActiveRecord/Attributes/ClassMethods.html) keyword which is introduced in rails 5. Both options are the same and works, simply make sure you specify in your HTML form the type if this is not a string, in our case gtins_count is an integer.
+`gtins_count` is the virtual attribute. I was using at first the `attr_accessor` ruby keyword to defined the getter / setter of the attributes, but I discovered the [attributes](https://api.rubyonrails.org/classes/ActiveRecord/Attributes/ClassMethods.html) keyword which is introduced in rails 5. Both options are the same and work, simply make sure you specify in your HTML form the type if this is not a string, in our case gtins_count is an integer.
 
 ## Step 3, the controller.
 __epc_orders_controller.rb__
