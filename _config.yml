@@ -36,9 +36,9 @@ github:
 plugins:
 
 algolia:
-  application_id: 'YD1JXRZX2P'
+  application_id: '89UJC37P4L'
   index_name: 'jekyll_posts_production'
-  read_only_api_key: '0727995295b5ffb0e667fc4bdcb66e00'
+  read_only_api_key: '6830f27e0743dd352d36fcff666532ae'
   excluded_files:
     - 404.html
     - index.html
