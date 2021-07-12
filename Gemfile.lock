@@ -1,8 +1,8 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.5.2)
-      public_suffix (>= 2.0.2, < 4.0)
+    addressable (2.8.0)
+      public_suffix (>= 2.0.2, < 5.0)
     algolia_html_extractor (2.2.1)
       awesome_print (~> 1.6)
       json (~> 2.0)
@@ -55,7 +55,7 @@ GEM
       mini_portile2 (~> 2.3.0)
     pathutil (0.16.1)
       forwardable-extended (~> 2.6)
-    public_suffix (3.0.1)
+    public_suffix (4.0.6)
     pygments.rb (1.2.1)
       multi_json (>= 1.0.0)
     rb-fsevent (0.10.2)
